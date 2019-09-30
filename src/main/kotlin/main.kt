@@ -1,14 +1,20 @@
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+
 fun main(){
     exampleBlocking()
 }
 
 fun exampleBlocking() {
     println("One")
-    printlnDelayed("Two")
+    runBlocking {
+        printlnDelayed("Two")
+    }
     println("Three")
 }
 
-fun printlnDelayed(message:String){
-    Thread.sleep(1000)
+suspend fun printlnDelayed(message:String){
+   // Thread.sleep(1000)
+    delay(1000)
     println(message)
 }
