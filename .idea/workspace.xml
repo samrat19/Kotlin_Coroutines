@@ -26,7 +26,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569825716493</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implements suspend and runBlocking">
+      <created>1569826026225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569826026225</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +126,7 @@
     <MESSAGE value="initializes the main function" />
     <MESSAGE value="creates the delay function" />
     <MESSAGE value="initiates the blocking function" />
-    <option name="LAST_COMMIT_MESSAGE" value="initiates the blocking function" />
+    <MESSAGE value="implements suspend and runBlocking" />
+    <option name="LAST_COMMIT_MESSAGE" value="implements suspend and runBlocking" />
   </component>
 </project>

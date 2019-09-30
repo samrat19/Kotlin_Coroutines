@@ -9,7 +9,7 @@ fun exampleBlocking() {
     println("One")
     runBlocking {
         printlnDelayed("Two")
-    }
+    } //we can call suspending functions from runBlocking it is a Coroutine scope
     println("Three")
 }
 
