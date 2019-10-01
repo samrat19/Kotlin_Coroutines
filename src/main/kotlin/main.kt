@@ -58,6 +58,9 @@ fun exampleLaunchCoroutineScope() = runBlocking {
     launch {
         printlnDelayed("Two from ${Thread.currentThread().name}")
     }
+    launch(Dispatchers.IO) {
+        printlnDelayed("Two from ${Thread.currentThread().name}")
+    } // IO dispatchers can rapidly spins up multiple threads
 
     println("Three from ${Thread.currentThread().name}")
 }
