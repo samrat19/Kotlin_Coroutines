@@ -170,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569909504711</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implemets job">
+      <created>1569909857426</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569909857426</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +203,7 @@
     <MESSAGE value="implements Dispatcher and Thread" />
     <MESSAGE value="tests Dispatcher and Thread" />
     <MESSAGE value="implemets Globasl Launch" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemets Globasl Launch" />
+    <MESSAGE value="implemets job" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemets job" />
   </component>
 </project>

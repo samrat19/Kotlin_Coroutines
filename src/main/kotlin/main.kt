@@ -3,7 +3,7 @@ import kotlinx.coroutines.*
 fun main(){
    // exampleBlocking()
    // exampleBlockingDispatcher()
-    exampleLaunchGlobalWaiting()
+    exampleLaunchCoroutineScope()
 }
 
 fun exampleBlocking() {
@@ -50,4 +50,14 @@ fun exampleLaunchGlobalWaiting() = runBlocking {
 
     println("Three from ${Thread.currentThread().name}")
     job.join()
+}
+
+fun exampleLaunchCoroutineScope() = runBlocking {
+    println("One from ${Thread.currentThread().name}")
+
+    launch {
+        printlnDelayed("Two from ${Thread.currentThread().name}")
+    }
+
+    println("Three from ${Thread.currentThread().name}")
 }
