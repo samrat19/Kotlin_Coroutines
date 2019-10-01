@@ -3,7 +3,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
 fun main(){
-    exampleBlocking()
+   // exampleBlocking()
+    exampleBlockingDispatcher()
 }
 
 fun exampleBlocking() {
@@ -22,7 +23,7 @@ suspend fun printlnDelayed(message:String){
     println(message)
 }
 
-fun expandedBlockingDispatcher(){
+fun exampleBlockingDispatcher(){
     runBlocking (Dispatchers.Default){
         println("One from Thread- ${Thread.currentThread().name}")
         printlnDelayed("Two from Thread - ${Thread.currentThread().name}")
