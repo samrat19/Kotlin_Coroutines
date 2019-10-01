@@ -7,7 +7,8 @@ fun main(){
    // exampleBlocking()
    // exampleBlockingDispatcher()
    // exampleLaunchCoroutineScope()
-    exampleAsync()
+   // exampleAsync()
+    exampleWithContext()
 }
 
 fun exampleBlocking() {
@@ -88,6 +89,23 @@ fun exampleAsync() = runBlocking {
     val result2 = async { calculateHard(3000) }
 
     val sum = result.await()+result1.await()+result2.await()
+
+    println("The ultimate result = $sum")
+
+    val endTime = System.currentTimeMillis()
+
+    println("Total time of execution = ${endTime - startTime}")
+}
+
+fun exampleWithContext() = runBlocking {
+
+    val startTime = System.currentTimeMillis()
+
+    val result = withContext(Dispatchers.Default){ calculateHard(1000) }
+    val result1 = withContext(Dispatchers.Default){ calculateHard(2000) }
+    val result2 = withContext(Dispatchers.Default){ calculateHard(3000) }
+
+    val sum = result+result1+result2
 
     println("The ultimate result = $sum")
 
