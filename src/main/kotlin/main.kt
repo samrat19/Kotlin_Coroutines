@@ -65,7 +65,7 @@ fun exampleLaunchCoroutineScope() = runBlocking {
     } // IO dispatchers can rapidly spins up multiple threads
 
     //our custom dispatcher
-    val executedDispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
+    //val executedDispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
 
     println("Three from ${Thread.currentThread().name}")
 }
