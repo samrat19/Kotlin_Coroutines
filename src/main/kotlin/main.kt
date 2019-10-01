@@ -1,4 +1,6 @@
 import kotlinx.coroutines.*
+import java.util.concurrent.Executor
+import java.util.concurrent.Executors
 
 fun main(){
    // exampleBlocking()
@@ -61,6 +63,9 @@ fun exampleLaunchCoroutineScope() = runBlocking {
     launch(Dispatchers.IO) {
         printlnDelayed("Two from ${Thread.currentThread().name}")
     } // IO dispatchers can rapidly spins up multiple threads
+
+    //our custom dispatcher
+    val executedDispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
 
     println("Three from ${Thread.currentThread().name}")
 }
