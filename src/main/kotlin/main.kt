@@ -1,5 +1,6 @@
 import kotlinx.coroutines.*
 import java.util.concurrent.Executor
+import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 fun main(){
@@ -65,7 +66,26 @@ fun exampleLaunchCoroutineScope() = runBlocking {
     } // IO dispatchers can rapidly spins up multiple threads
 
     //our custom dispatcher
-    //val executedDispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
+    val executedDispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
 
     println("Three from ${Thread.currentThread().name}")
+
+    (executedDispatcher.executor as ExecutorService).shutdown()
+}
+
+suspend fun calculateHard(num : Int):Int{
+    delay(1000)
+    return num*1000
+}
+
+fun exampleAsync() = runBlocking {
+
+    val startTime = System.currentTimeMillis()
+
+    val result = async { calculateHard(1000) }
+    val result1 = async { calculateHard(2000) }
+    val result2 = async { calculateHard(3000) }
+
+    val sum = result.await()+result1.await()+result2.await()
+
 }

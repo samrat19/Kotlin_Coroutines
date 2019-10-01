@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="168a922b-686c-4b16-b8e3-c665eef18526" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569911181939</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="creates custom dispatcher">
+      <created>1569911642782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569911642782</updated>
+    </task>
+    <task id="LOCAL-00014" summary="creates custom dispatcher">
+      <created>1569911671484</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569911671484</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +199,7 @@
     <MESSAGE value="implemets job" />
     <MESSAGE value="implements local coroutine scope" />
     <MESSAGE value="defines difference in execution of Main thread and current thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="defines difference in execution of Main thread and current thread" />
+    <MESSAGE value="creates custom dispatcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="creates custom dispatcher" />
   </component>
 </project>
