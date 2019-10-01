@@ -6,7 +6,8 @@ import java.util.concurrent.Executors
 fun main(){
    // exampleBlocking()
    // exampleBlockingDispatcher()
-    exampleLaunchCoroutineScope()
+   // exampleLaunchCoroutineScope()
+    exampleAsync()
 }
 
 fun exampleBlocking() {
@@ -88,4 +89,9 @@ fun exampleAsync() = runBlocking {
 
     val sum = result.await()+result1.await()+result2.await()
 
+    println("The ultimate result = $sum")
+
+    val endTime = System.currentTimeMillis()
+
+    println("Total time of execution = ${endTime - startTime}")
 }
