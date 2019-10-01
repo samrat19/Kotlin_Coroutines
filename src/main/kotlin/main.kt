@@ -1,3 +1,4 @@
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
@@ -9,7 +10,9 @@ fun exampleBlocking() {
     println("One")
     runBlocking {
         printlnDelayed("Two")
-    } //we can call suspending functions from runBlocking it is a Coroutine scope
+    }
+    //we can call suspending functions from runBlocking
+    // it is a Coroutine scope
     println("Three")
 }
 
@@ -17,4 +20,10 @@ suspend fun printlnDelayed(message:String){
    // Thread.sleep(1000)
     delay(1000)
     println(message)
+}
+
+fun expandedBlockingDispatcher(){
+    runBlocking (Dispatchers.Default){
+
+    }
 }
